@@ -3,7 +3,7 @@
 This is the archived dataset and Rscripts used to generate figures for Agarophyton vermiculophyllum SNP dataset. Author list: Ben A. Flanagan, Stacy A. Krueger-Hadfield, Courtney J. Murren, Chris C. Nice, Allan E. Strand, and Erik E. Sotka
 
 ## Software  
-angsd and associated programs: http://www.popgen.dk/angsd/index.php 
+angsd and associated programs: http://www.popgen.dk/angsd/index.php  
 VCFTOOLS: https://vcftools.github.io/index.html  
 bedtools: https://bedtools.readthedocs.io/en/latest/  
 
