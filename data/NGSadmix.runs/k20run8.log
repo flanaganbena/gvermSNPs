@@ -1,0 +1,9 @@
+Input: lname=../dipsmll.351ind.beagle.gz nPop=20, fname=(null) qname=(null) outfiles=k20run8
+Setup: seed=1556887316 nThreads=2 method=1
+Convergence: maxIter=2000 tol=0.000010 tolLike50=0.100000 dymBound=0
+Filters: misTol=0.050000 minMaf=0.050000 minLrt=0.000000 minInd=0
+Input file has dim: nsites=62285 nind=351
+Input file has dim (AFTER filtering): nsites=41453 nind=351
+	[ALL done] cpu-time used =  5224.03 sec
+	[ALL done] walltime used =  2660.00 sec
+best like=-7576244.016507 after 1400 iterations
