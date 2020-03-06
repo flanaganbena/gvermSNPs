@@ -160,7 +160,7 @@ gg2b <- ggplot(emp2,aes(x=natnon,y=Hobs,fill=natnon)) +
   scale_fill_manual(values=alpha(c("black","red"),.1)) +
   theme_bw() + theme(legend.position = "none")
 
-m <- lm(log(emp2$Hobs)~emp2$natnon)
+m <- lm(emp2$Hobs~emp2$natnon)
 print(anova(m))
 #################################
 #### Tajima D ####
