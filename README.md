@@ -115,6 +115,7 @@ This code take the ngsFST files (by chromesome and pairwise set of populations),
 ### Figure: Empirical vs simulation results - 4 traits (LD, Hobs, D, Pi). ANOVAs are also produced here.   
 "R/simulation+empiricalData.R"  
 "output/simulation+empirical.pdf"  
+"output/ANOVAs.txt"  
 
 ### Figure: Simulation for supplemental materials. Expansion.  
 TO ADD

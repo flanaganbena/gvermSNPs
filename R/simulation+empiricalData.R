@@ -1,5 +1,7 @@
 # combine simulation and empirical data
 
+sink('output/ANOVA.txt')
+
 ############################
 #### half-decay distance ####
 ############################
@@ -326,3 +328,4 @@ grid.arrange(gg1b,gg1a,
              gg4b,gg4a,
              widths=c(1,2),nrow=4,ncol=2)
 dev.off()
+sink()

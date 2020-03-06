@@ -1,0 +1,32 @@
+Analysis of Variance Table
+
+Response: log(emp1$halfdecay)
+            Df Sum Sq Mean Sq F value   Pr(>F)   
+emp1$natnon  1 12.503 12.5026  12.904 0.001821 **
+Residuals   20 19.378  0.9689                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Analysis of Variance Table
+
+Response: emp2$Hobs
+            Df    Sum Sq   Mean Sq F value   Pr(>F)   
+emp2$natnon  1 0.0089986 0.0089986  9.9233 0.003458 **
+Residuals   33 0.0299246 0.0009068                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Analysis of Variance Table
+
+Response: emp3$TajimaD
+            Df  Sum Sq Mean Sq F value   Pr(>F)   
+emp3$natnon  1 0.81486 0.81486  10.822 0.002391 **
+Residuals   33 2.48485 0.07530                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Analysis of Variance Table
+
+Response: emp4$sites.pi
+            Df    Sum Sq   Mean Sq F value Pr(>F)  
+emp4$natnon  1 0.0038854 0.0038854  4.9282 0.0334 *
+Residuals   33 0.0260174 0.0007884                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
