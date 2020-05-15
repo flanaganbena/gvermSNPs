@@ -46,3 +46,16 @@ gg <- ggplot(stats, aes(x=size.kbp, y = halfdecaydist,color=natnon)) +
 pdf('output/halfdecay.by.chrLength+natnon.500bpBINS.pdf',width=6,height=4)
 print(gg)
 dev.off()
+### version 2
+pdf('output/halfdecay.by.chrLength+natnon.500bpBINS.v2.pdf',width=8,height=5)
+par(mfrow=c(1,2),mar=c(2,2,2,2))
+for (i in 1:2)
+{
+  plot(1,1,xlim=c(1000,3600),ylim=c(0,200),xlab="Scaffold length (kbp)", ylab="Half-decay distance (kbp)",type="n")
+  tmp <- stats[stats$natnon==unique(stats$natnon)[i],]
+  points(tmp$size.kbp, tmp$halfdecaydist, col=alpha(c("black","red")[i],.5),pch=19)
+  abline(lm(halfdecaydist~size.kbp,data=tmp),col=c("black","red")[i],lwd=2)
+}  
+  
+
+dev.off()
