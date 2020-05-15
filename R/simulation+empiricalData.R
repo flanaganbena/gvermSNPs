@@ -63,10 +63,10 @@ gg1a <- ggplot(sim1, aes(x=gen, y = halfdecaydist.kb, fill = clonality)) +
   geom_boxplot(outlier.shape=20,outlier.size = .8)+
   xlab("Generation") +
   ylab("") +
-  ylim(0, 120) +
+  ylim(0, 140) +
   scale_fill_grey(start=.5,end=1) +
   theme_bw() + 
-  theme(legend.position = c(.65, .75), legend.box.background = element_rect(colour = "black"),legend.title = element_blank())
+  theme(legend.position = c(.65, .85),legend.title = element_blank(), legend.background = element_blank())
 
 # empirical data #
 emp <- read.csv('output/ngsLD.stats.500bpBINS.csv')
@@ -78,7 +78,7 @@ gg1b <- ggplot(emp1,aes(x=natnon,y=halfdecay,fill=natnon)) +
   geom_jitter(position=position_jitter(width=0.1),color=c("black","red")[emp1$natnon]) +
   xlab("") +
   ylab("Half-decay distance (kbp)") +
-  ylim(0, 120) +
+  ylim(0, 140) +
   scale_fill_manual(values=alpha(c("black","red"),.1)) +
   theme_bw() + theme(legend.position = "none")
 
