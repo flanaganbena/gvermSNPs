@@ -111,6 +111,7 @@ This code take the ngsFST files (by chromesome and pairwise set of populations),
 "R/halfdecay.by.chrLength+natnon.500bpBINS.R"  
 "output/halfdecay.by.natnon.500bpBINS-bypop.pdf"  
 "output/halfdecay.by.chrLength+natnon.500bpBINS.pdf"  
+"output/halfdecay.by.chrLength+natnon.500bpBINS.v2.pdf"  
 
 ### Figure: Empirical vs simulation results - 4 traits (LD, Hobs, D, Pi). ANOVAs are also produced here.   
 "R/simulation+empiricalData.R"  
