@@ -329,3 +329,40 @@ grid.arrange(gg1b,gg1a,
              widths=c(1,2),nrow=4,ncol=2)
 dev.off()
 sink()
+
+#### Tukey HSD ####
+sink('output/TukeyHSD.txt')
+print('LD')
+gens <- levels(sim1$gen)
+for (i in c(1:2,4:6))
+{
+  tmp <- sim1[sim1$gen==gens[i],]
+  print(gens[i])
+  print(TukeyHSD(aov(lm(log(tmp$halfdecaydist.kb)~tmp$clonality))))
+}
+print('Hobs')
+gens <- levels(sim2$gen)
+for (i in c(1:2,4:6))
+{
+  tmp <- sim2[sim2$gen==gens[i],]
+  print(gens[i])
+  print(TukeyHSD(aov(lm(log(tmp$hobs)~tmp$clonality))))
+}
+print('TajimaD')
+gens <- levels(sim3$gen)
+for (i in c(1:2,4:6))
+{
+  tmp <- sim3[sim3$gen==gens[i],]
+  print(gens[i])
+  print(TukeyHSD(aov(lm(log(tmp$TajimaD)~tmp$clonality))))
+}
+print('Sites Pi')
+gens <- levels(sim4$gen)
+for (i in c(1:2,4:6))
+{
+  tmp <- sim4[sim4$gen==gens[i],]
+  print(gens[i])
+  print(TukeyHSD(aov(lm(log(tmp$PI)~tmp$clonality))))
+}
+
+sink()

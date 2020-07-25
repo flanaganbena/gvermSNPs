@@ -117,12 +117,11 @@ This code take the ngsFST files (by chromesome and pairwise set of populations),
 "R/simulation+empiricalData.R"  
 "output/simulation+empirical.pdf"  
 "output/ANOVAs.txt"  
+"output/TukeyHSD.txt"  
 
 ### Figure: Simulation for supplemental materials. Expansion.  
-TO ADD
 
 ### Figure: Simulation for supplemental materials. 70-99% clonality vs 90-99% bottleneck  
-TO ADD
 
 ### Figure: Pairwise Fst of native sources (mng/sou combined) with the most closely related population along western North America (tmb; top panel), eastern North America (osh; middle panel) and Europe (fdm; lower panel). Lines indicate the 99% outlier loci for comparison purposes only.  
 "R/Fstoutlier.mngsou.vs.non.R"  
