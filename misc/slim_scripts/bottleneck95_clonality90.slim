@@ -1,0 +1,43 @@
+
+// Keywords: clonal reproduction
+
+initialize() {
+        initializeMutationRate(1e-7);
+        initializeMutationType("m1", 0.5, "f", 0.0);
+        initializeGenomicElementType("g1", m1, 1.0);
+        initializeGenomicElement(g1, 0, 999999); // 100kb
+        initializeRecombinationRate(1e-8);
+}
+
+1 { sim.addSubpop("p1", 1000); }
+9999 late() { p1.outputVCFSample(500, filePath="./bn_95_cl_90_pre.vcf"); }
+10000 { p1.setSubpopulationSize(50); } // change population size by 95% at generation 1000
+10001 { p1.setSubpopulationSize(1000); } // return pop size to 1000 after bottleneck
+10000:12000 {p1.setCloningRate(0.9);
+                if (sim.generation == 10002)
+        {
+        p1.outputVCFSample(500, filePath="./bn_95_cl_90_post_01.vcf");
+        }
+                if (sim.generation == 10011)
+        {
+        p1.outputVCFSample(500, filePath="./bn_95_cl_90_post_10.vcf");
+        }
+                if (sim.generation == 10026)
+        {
+        p1.outputVCFSample(500, filePath="./bn_95_cl_90_post_25.vcf");
+        }
+                if (sim.generation == 10051)
+        {
+        p1.outputVCFSample(500, filePath="./bn_95_cl_90_post_50.vcf");
+        }
+                if (sim.generation == 10101)
+        {
+        p1.outputVCFSample(500, filePath="./bn_95_cl_90_post_100.vcf");
+        }
+}
+
+10200 late() {p1.outputVCFSample(500, filePath="./bn_95_cl_90_post_200.vcf");}
+
+
+
+
