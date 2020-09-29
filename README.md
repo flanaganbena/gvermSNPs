@@ -62,7 +62,7 @@ Description: Diversity (pi) from genotype calls, produced by angsd / VCFTOOLS
 17) "LDanalysis.500bpBINS.rdata"  
 Description: The 3rd and 4th columns of these files are the genetic distance in kb and r2 (LD) values for each population x chromosome combination, averaged within 500bp bins. Produced by ngsLD  
 
-18) "simulations"  and "SLim scripts"
+18) "simulations"  and "SLim scripts"  
 Description: SLiM runs and scripts that generated them.  
 
 19) "mast_fst_out.txt.gz"  
