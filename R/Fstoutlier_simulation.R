@@ -21,7 +21,9 @@ for (j in unique(goi)){
   set.seed(1900)
   tmp <-  dat %>% filter(gen == j) %>% filter(rep2 %in% sample(unique(dat$rep2),26)) %>% arrange(rep2)
   tmp$fst <- as.numeric(as.character(tmp$fst))
-  rep2.cols <- data.frame(rep2=unique(tmp$rep2),cols=c(rep(c("red","blue"),13)))
+  thin <- as.numeric(sample(nrow(tmp), nrow(tmp) * 0.3)) #thinned data to 30%; didn't change visual infrence
+  tmp <- tmp[sort(thin), ]
+  rep2.cols <- data.frame(rep2=unique(tmp$rep2),cols=c(rep(c("#FFC20A","#0C7BDC"),13)))
   cols.to.use <- rep2.cols$cols[match(tmp$rep2,rep2.cols$rep2)]
   plot(tmp$fst, pch=20, cex=.75, col=as.character(cols.to.use),
        ylab="Fst",xlab="",xaxt="n",main=j,ylim=c(0,1))

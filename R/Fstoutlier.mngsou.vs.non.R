@@ -20,8 +20,9 @@ for(i in 1:length(a))
 }
 all$chr_pos <- paste(all$chr,"_",all$midPos,sep="")
 
-pops <- c("mngsou.tmb","mngsou.osh","fdm.mngsou") #unique(all$pop); pops <- pops[c(3,2,1)]
-chrs.cols <- data.frame(chrs=levels(all$chr),cols=c(rep(c("red","blue"),12)))
+pops <- c("mngsou.tmb","mngsou.osh","fdm.mngsou")
+pops2 <- c("mng + sou vs. tmb","mng + sou vs. osh","mng + sou vs. fdm")
+chrs.cols <- data.frame(chrs=levels(all$chr),cols=c(rep(c("#FFC20A","#0C7BDC"),12)))
 
 out <- c()
 stats <- c()
@@ -32,7 +33,7 @@ for (j in 1:length(pops))
   tmp <- all[all$pop==pops[j],]
   cols.to.use <- chrs.cols$cols[match(tmp$chr,chrs.cols$chrs)]
   plot(tmp$fst,pch=20,cex=.75,col=as.character(cols.to.use),
-       ylab="Fst",xlab="",xaxt="n",main=pops[j],ylim=c(0,1))
+       ylab="Fst",xlab="",xaxt="n",main=pops2[j],ylim=c(0,1))
   x=c(tapply(1:nrow(tmp),tmp$chr,mean))
   minx=c(tapply(1:nrow(tmp),tmp$chr,min))-1
   mtext(levels(tmp$chr),at=x,las=3,cex=.8,side=1,line=.5,col=as.character(chrs.cols$cols))
