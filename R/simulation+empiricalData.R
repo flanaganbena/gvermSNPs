@@ -84,13 +84,14 @@ gg1b <- ggplot(emp1,aes(x=natnon,y=halfdecay,fill=natnon)) +
 
 m <- lm(log(emp1$halfdecay)~emp1$natnon)
 print(anova(m))
+
 #################################
 #### Observed heterozygosity ####
 ################################
 
 # 99% bottleneck; no clonality; 0 --> 1000 generations #
 bn_99 <- read.table("data/simulations/bottleneck_99.het.gz", header = T)
-bn_99$hobs <- (bn_99$N_SITES-bn_99$O.HOM.)/bn_99$N_SITES
+bn_99$hobs <- (bn_99$N_SITES-bn_99$O.HOM.)/bn_99$nsites
 bn_99 <- bn_99[grepl("rep", bn_99$outnam),]
 bn_99$outnam <- gsub("pre", "pre_0", as.character(bn_99$outnam))
 tmp <- strsplit(bn_99$outnam,"_")
@@ -104,7 +105,7 @@ bn_99.xbar <- data.frame(bn_99.xbar,clonality="99% Bottleneck + No clonality")
 
 # 99% bottleneck; 100% clonality
 bn_99_cl_100 <- read.table("data/simulations/bottleneck_99_clonality_100.het.gz", header = T)
-bn_99_cl_100$hobs <- (bn_99_cl_100$N_SITES-bn_99_cl_100$O.HOM.)/bn_99_cl_100$N_SITES
+bn_99_cl_100$hobs <- (bn_99_cl_100$N_SITES-bn_99_cl_100$O.HOM.)/bn_99_cl_100$nsites
 bn_99_cl_100 <- bn_99_cl_100[grepl("rep", bn_99_cl_100$outnam),]
 bn_99_cl_100$outnam <- gsub("pre", "pre_0", as.character(bn_99_cl_100$outnam))
 tmp <- strsplit(bn_99_cl_100$outnam,"_")
@@ -118,7 +119,7 @@ bn_99_cl_100.xbar <- data.frame(bn_99_cl_100.xbar,clonality="99% Bottleneck + 10
 
 # no bottleneck; 100% clonality
 bn_no_cl_100 <- read.table('data/simulations/clonality_100.het.gz',header=T)
-bn_no_cl_100$hobs <- (bn_no_cl_100$N_SITES-bn_no_cl_100$O.HOM.)/bn_no_cl_100$N_SITES
+bn_no_cl_100$hobs <- (bn_no_cl_100$N_SITES-bn_no_cl_100$O.HOM.)/bn_no_cl_100$nsites
 bn_no_cl_100 <- bn_no_cl_100[grepl("rep", bn_no_cl_100$outnam),]
 bn_no_cl_100$outnam <- gsub("pre", "pre_0", as.character(bn_no_cl_100$outnam))
 tmp <- strsplit(bn_no_cl_100$outnam,"_")
@@ -153,9 +154,10 @@ gg2a <- ggplot(sim2, aes(x=gen, y = hobs, fill = clonality)) +
 emp2 <- read.csv('data/Hobs.means.csv')
 #poptouse <- c("aka","ave","cfj","cnt","dhd","dns","fdm","fut","hay","hik","lhp","mng","nyc","osh","ris","shk","sou","tmb","uho","usu","waj","wwf")
 #emp2 <- emp2[emp2$pop%in%poptouse,]
-gg2b <- ggplot(emp2,aes(x=natnon,y=Hobs,fill=natnon)) +
+gg2b <- ggplot(emp2,aes(x=natnon,y=Hobs,fill=natnon, label = pop)) +
   geom_boxplot(outlier.shape=20,outlier.size = .8,color=alpha(c("black","red"),.75))+
   geom_jitter(position=position_jitter(width=0.1),color=c("black","red")[emp2$natnon]) +
+  geom_text() +
   xlab("") +
   ylab("Ho") +
   #ylim(0, 0.25) +
@@ -164,6 +166,7 @@ gg2b <- ggplot(emp2,aes(x=natnon,y=Hobs,fill=natnon)) +
 
 m <- lm(emp2$Hobs~emp2$natnon)
 print(anova(m))
+
 #################################
 #### Tajima D ####
 ################################
@@ -255,10 +258,16 @@ tmp <- strsplit(bn_99$outnam,"_")
 tmp2 <- unlist(lapply(tmp,"[[",4)) ### check this is the right column with (table())
 bn_99$gen <- tmp2
 bn_99$gen <- sub("\\<01\\>", "1", bn_99$gen) ### Change values for plotting.
-bn_99$rep <- unlist(lapply(tmp,"[[",5)) # there were ~7000 sliding window 
-bn_99.subset <- bn_99[bn_99$gen%in%c("0","1","10","100","200"),]
-bn_99.xbar <- aggregate(bn_99.subset$PI,by=list(bn_99.subset$rep,bn_99.subset$gen),mean,na.rm=T)
-bn_99.xbar <- data.frame(bn_99.xbar,clonality="99% Bottleneck + no clonality")
+bn_99$rep <- unlist(lapply(tmp,"[[",5)) # there were ~7000 sliding window
+
+foo <- bn_99 %>% group_by(rep) %>% summarise(nloc = length(unique(POS)))
+sum <- bn_99 %>% group_by(rep, gen) %>% summarise(mean_PI = mean(PI), n = length(PI))
+bn_99_sum <- full_join(sum, foo, by = "rep")
+bn_99_sum$real_PI <- (bn_99_sum$mean_PI * bn_99_sum$n) / bn_99_sum$nloc
+
+bn_99.xbar <- data.frame(bn_99_sum, clonality="99% Bottleneck + no clonality")
+bn_99.xbar <- bn_99.xbar[bn_99.xbar$gen%in%c("0","1","10","100","200"),]
+
 
 # 99% bottleneck; 100% clonality
 bn_99_cl_100 <- read.table("data/simulations/bottleneck_99_clonality_100.sites.pi.gz", header = T)
@@ -269,9 +278,14 @@ tmp2 <- unlist(lapply(tmp,"[[",6)) ### check this is the right column with (tabl
 bn_99_cl_100$gen <- tmp2
 bn_99_cl_100$gen <- sub("\\<01\\>", "1", bn_99_cl_100$gen) ### Change values for plotting.
 bn_99_cl_100$rep <- unlist(lapply(tmp,"[[",7)) # there were ~7000 sliding window 
-bn_99_cl_100.subset <- bn_99_cl_100[bn_99_cl_100$gen%in%c("0","1","10","100","200"),]
-bn_99_cl_100.xbar <- aggregate(bn_99_cl_100.subset$PI,by=list(bn_99_cl_100.subset$rep,bn_99_cl_100.subset$gen),mean,na.rm=T)
-bn_99_cl_100.xbar <- data.frame(bn_99_cl_100.xbar,clonality="99% Bottleneck + 100% clonality")
+
+foo <- bn_99_cl_100 %>% group_by(rep) %>% summarise(nloc = length(unique(POS)))
+sum <- bn_99_cl_100 %>% group_by(rep, gen) %>% summarise(mean_PI = mean(PI), n = length(PI))
+bn_99_cl_100_sum <- full_join(sum, foo, by = "rep")
+bn_99_cl_100_sum$real_PI <- (bn_99_cl_100_sum$mean_PI * bn_99_cl_100_sum$n) / bn_99_cl_100_sum$nloc
+
+bn_99_cl_100.xbar <- data.frame(bn_99_cl_100_sum,clonality="99% Bottleneck + 100% clonality")
+bn_99_cl_100.xbar <- bn_99_cl_100.xbar[bn_99_cl_100.xbar$gen%in%c("0","1","10","100","200"),]
 
 # no bottleneck; 100% clonality
 bn_no_cl_100 <- read.table("data/simulations/clonality_100.sites.pi.gz", header = T)
@@ -282,24 +296,28 @@ tmp2 <- unlist(lapply(tmp,"[[",4)) ### check this is the right column with (tabl
 bn_no_cl_100$gen <- tmp2
 bn_no_cl_100$gen <- sub("\\<01\\>", "1", bn_no_cl_100$gen) ### Change values for plotting.
 bn_no_cl_100$rep <- unlist(lapply(tmp,"[[",5)) # there were ~7000 sliding window 
-bn_no_cl_100.subset <- bn_no_cl_100[bn_no_cl_100$gen%in%c("0","1","10","100","200"),]
-bn_no_cl_100.xbar <- aggregate(bn_no_cl_100.subset$PI,by=list(bn_no_cl_100.subset$rep,bn_no_cl_100.subset$gen),mean,na.rm=T)
-bn_no_cl_100.xbar <- data.frame(bn_no_cl_100.xbar,clonality="No Bottleneck + 100% clonality")
+
+foo <- bn_no_cl_100 %>% group_by(rep) %>% summarise(nloc = length(unique(POS)))
+sum <- bn_no_cl_100 %>% group_by(rep, gen) %>% summarise(mean_PI = mean(PI), n = length(PI))
+bn_no_cl_100_sum <- full_join(sum, foo, by = "rep")
+bn_no_cl_100_sum$real_PI <- (bn_no_cl_100_sum$mean_PI * bn_no_cl_100_sum$n) / bn_no_cl_100_sum$nloc
+
+bn_no_cl_100.xbar <- data.frame(bn_no_cl_100_sum,clonality="No Bottleneck + 100% clonality")
+bn_no_cl_100.xbar <- bn_no_cl_100.xbar[bn_no_cl_100.xbar$gen%in%c("0","1","10","100","200"),]
 
 # combine datasets #
 sim4 <- rbind(bn_99.xbar,bn_99_cl_100.xbar,bn_no_cl_100.xbar)
-colnames(sim4) <- c("rep","gen","PI","clonality")
 
 ## relabel "generations"
 sim4$gen[sim4$gen=="0"] <- "Before"
 sim4$gen[sim4$gen=="1"] <- "0"
 sim4$gen <- factor(sim4$gen,levels=c("Before","0","1","10","100","200"))
 
-gg4a <- ggplot(sim4, aes(x=gen, y = PI, fill = clonality)) +
+gg4a <- ggplot(sim4, aes(x=gen, y = real_PI, fill = clonality)) +
   geom_boxplot(outlier.shape=20,outlier.size = .8)+
   xlab("Generation") +
   ylab("") +
-  ylim(0, 0.30) +
+  #ylim(0, 0.30) +
   scale_fill_grey(start=.5,end=1) +
   theme_bw() + 
   theme(legend.position = "none")
@@ -308,9 +326,10 @@ gg4a <- ggplot(sim4, aes(x=gen, y = PI, fill = clonality)) +
 emp4 <- read.csv('data/sites.pi.means.csv')
 #poptouse <- c("aka","ave","cfj","cnt","dhd","dns","fdm","fut","hay","hik","lhp","mng","nyc","osh","ris","shk","sou","tmb","uho","usu","waj","wwf")
 #emp4 <- emp4[emp4$pop%in%poptouse,]
-gg4b <- ggplot(emp4,aes(x=natnon,y=sites.pi,fill=natnon)) +
+gg4b <- ggplot(emp4,aes(x=natnon,y=sites.pi,fill=natnon, label = pop)) +
   geom_boxplot(outlier.shape=20,outlier.size = .8,color=alpha(c("black","red"),.75))+
   geom_jitter(position=position_jitter(width=0.1),color=c("black","red")[emp4$natnon]) +
+  geom_text() + 
   xlab("") +
   ylab("PI") +
   ylim(0, 0.30) +

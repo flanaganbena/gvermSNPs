@@ -27,7 +27,7 @@ pca_pop_means <- data.frame(xbar1, xbar2, xbar3, xbar4, nat.non2)
 pca_pop_means$pops <- rownames(pca_pop_means)
 rownames(pca_pop_means) <- NULL
 pca_pop_means$to_include_p1 <- ifelse(pca_pop_means$nat.non2 == "Japan" | pca_pop_means$pops %in% c("moo", "eld", "ptw"), "y", "n")
-pca_pop_means$to_include_p2 <- ifelse(pca_pop_means$nat.non2 == "Non-native" | pca_pop_means$pops %in% c("mng", "sou", "mou"), "y", "n")
+pca_pop_means$to_include_p2 <- ifelse(pca_pop_means$nat.non2 == "Non-native" | pca_pop_means$pops %in% c("mng", "sou", "mou", "hik", "nag", "shk", "waj", "usu", "akk", "hay", "fut"), "y", "n")
 
 
 p1 <- ggplot(pca_dat, aes(x = PC1, y = PC2, color = nat.non)) +
@@ -51,7 +51,7 @@ p2 <- ggplot(pca_dat, aes(x = PC3, y = PC4, color = nat.non)) +
   geom_text_repel(data = pca_pop_means %>% filter(to_include_p2 == "y"),
                   aes(x = xbar3, y = xbar4, label = pops, color = nat.non2),
                   force = 0.1,
-                  box.padding = 0.3,
+                  box.padding = 0.2,
                   fontface = "bold",
                   arrow = arrow(length = unit(0.006, "npc"), type = "closed", ends = "first")) +  scale_color_manual(values=c("black", "red")) +
   theme_minimal() +

@@ -6,22 +6,10 @@
 Fit: aov(formula = lm(log(tmp$halfdecaydist.kb) ~ tmp$clonality))
 
 $`tmp$clonality`
-                                                                      diff
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality   0.15526643
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality  0.11181290
-No bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.04345352
-                                                                       lwr
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  -0.06528175
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.10873528
-No bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.26400170
-                                                                     upr
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  0.3758146
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.3323611
-No bottleneck + 100% clonality-99% Bottleneck + No clonality   0.1770947
-                                                                   p adj
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  0.2231200
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.4575533
-No bottleneck + 100% clonality-99% Bottleneck + No clonality   0.8881211
+                                                                      diff         lwr       upr     p adj
+99% Bottleneck + No clonality-99% Bottleneck + 100% clonality   0.15526643 -0.06528175 0.3758146 0.2231200
+No bottleneck + 100% clonality-99% Bottleneck + 100% clonality  0.11181290 -0.10873528 0.3323611 0.4575533
+No bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.04345352 -0.26400170 0.1770947 0.8881211
 
 [1] "0"
   Tukey multiple comparisons of means
@@ -30,22 +18,10 @@ No bottleneck + 100% clonality-99% Bottleneck + No clonality   0.8881211
 Fit: aov(formula = lm(log(tmp$halfdecaydist.kb) ~ tmp$clonality))
 
 $`tmp$clonality`
-                                                                     diff
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  -0.4958365
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -2.0126375
-No bottleneck + 100% clonality-99% Bottleneck + No clonality   -1.5168009
-                                                                      lwr
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  -0.8479892
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -2.3647902
-No bottleneck + 100% clonality-99% Bottleneck + No clonality   -1.8689536
-                                                                      upr
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  -0.1436839
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -1.6604848
-No bottleneck + 100% clonality-99% Bottleneck + No clonality   -1.1646482
-                                                                   p adj
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  0.0029352
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0000000
-No bottleneck + 100% clonality-99% Bottleneck + No clonality   0.0000000
+                                                                     diff        lwr        upr     p adj
+99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  -0.4958365 -0.8479892 -0.1436839 0.0029352
+No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -2.0126375 -2.3647902 -1.6604848 0.0000000
+No bottleneck + 100% clonality-99% Bottleneck + No clonality   -1.5168009 -1.8689536 -1.1646482 0.0000000
 
 [1] "10"
   Tukey multiple comparisons of means
@@ -54,22 +30,10 @@ No bottleneck + 100% clonality-99% Bottleneck + No clonality   0.0000000
 Fit: aov(formula = lm(log(tmp$halfdecaydist.kb) ~ tmp$clonality))
 
 $`tmp$clonality`
-                                                                     diff
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  -0.2881514
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -1.4425381
-No bottleneck + 100% clonality-99% Bottleneck + No clonality   -1.1543867
-                                                                      lwr
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  -0.6113004
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -1.7656871
-No bottleneck + 100% clonality-99% Bottleneck + No clonality   -1.4775357
-                                                                       upr
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality   0.03499767
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -1.11938901
-No bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.83123762
-                                                                  p adj
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  0.091469
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.000000
-No bottleneck + 100% clonality-99% Bottleneck + No clonality   0.000000
+                                                                     diff        lwr         upr    p adj
+99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  -0.2881514 -0.6113004  0.03499767 0.091469
+No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -1.4425381 -1.7656871 -1.11938901 0.000000
+No bottleneck + 100% clonality-99% Bottleneck + No clonality   -1.1543867 -1.4775357 -0.83123762 0.000000
 
 [1] "100"
   Tukey multiple comparisons of means
@@ -78,22 +42,10 @@ No bottleneck + 100% clonality-99% Bottleneck + No clonality   0.000000
 Fit: aov(formula = lm(log(tmp$halfdecaydist.kb) ~ tmp$clonality))
 
 $`tmp$clonality`
-                                                                     diff
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  -0.3733575
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.4960663
-No bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.1227088
-                                                                      lwr
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  -0.5851439
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.7078527
-No bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.3344952
-                                                                       upr
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  -0.16157108
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.28427990
-No bottleneck + 100% clonality-99% Bottleneck + No clonality    0.08907758
-                                                                   p adj
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  0.0001271
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0000002
-No bottleneck + 100% clonality-99% Bottleneck + No clonality   0.3607834
+                                                                     diff        lwr         upr     p adj
+99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  -0.3733575 -0.5851439 -0.16157108 0.0001271
+No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.4960663 -0.7078527 -0.28427990 0.0000002
+No bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.1227088 -0.3344952  0.08907758 0.3607834
 
 [1] "200"
   Tukey multiple comparisons of means
@@ -102,22 +54,10 @@ No bottleneck + 100% clonality-99% Bottleneck + No clonality   0.3607834
 Fit: aov(formula = lm(log(tmp$halfdecaydist.kb) ~ tmp$clonality))
 
 $`tmp$clonality`
-                                                                     diff
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  -0.6521123
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.2416220
-No bottleneck + 100% clonality-99% Bottleneck + No clonality    0.4104904
-                                                                      lwr
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  -0.8716239
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.4611335
-No bottleneck + 100% clonality-99% Bottleneck + No clonality    0.1909788
-                                                                       upr
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  -0.43260077
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.02211041
-No bottleneck + 100% clonality-99% Bottleneck + No clonality    0.63000191
-                                                                   p adj
-99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  0.0000000
-No bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0269260
-No bottleneck + 100% clonality-99% Bottleneck + No clonality   0.0000439
+                                                                     diff        lwr         upr     p adj
+99% Bottleneck + No clonality-99% Bottleneck + 100% clonality  -0.6521123 -0.8716239 -0.43260077 0.0000000
+No bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.2416220 -0.4611335 -0.02211041 0.0269260
+No bottleneck + 100% clonality-99% Bottleneck + No clonality    0.4104904  0.1909788  0.63000191 0.0000439
 
 [1] "Hobs"
 [1] "Before"
@@ -127,22 +67,10 @@ No bottleneck + 100% clonality-99% Bottleneck + No clonality   0.0000439
 Fit: aov(formula = lm(log(tmp$hobs) ~ tmp$clonality))
 
 $`tmp$clonality`
-                                                                       diff
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  -0.006101087
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality    0.018153433
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality  0.024254520
-                                                                       lwr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  -0.05070433
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.02644981
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.02034872
-                                                                      upr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  0.03850215
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.06275667
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.06885776
-                                                                   p adj
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  0.9443937
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.6035732
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.4070725
+                                                                       diff         lwr        upr     p adj
+99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  -0.014850932 -0.06952939 0.03982753 0.7982790
+No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.016319298 -0.07099776 0.03835916 0.7618845
+No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.001468366 -0.05614683 0.05321009 0.9977964
 
 [1] "0"
   Tukey multiple comparisons of means
@@ -151,22 +79,10 @@ No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.4070725
 Fit: aov(formula = lm(log(tmp$hobs) ~ tmp$clonality))
 
 $`tmp$clonality`
-                                                                      diff
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.04742063
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.61624572
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.66366635
-                                                                        lwr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.005437475
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.658228872
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.705649499
-                                                                       upr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.08940378
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.57426257
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.62168320
-                                                                   p adj
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  0.0223366
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.0000000
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0000000
+                                                                       diff         lwr        upr     p adj
+99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.038676459 -0.02432311 0.10167603 0.3186813
+No Bottleneck + 100% clonality-99% Bottleneck + No clonality    0.037422634 -0.02557694 0.10042221 0.3426084
+No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.001253825 -0.06425340 0.06174575 0.9987891
 
 [1] "10"
   Tukey multiple comparisons of means
@@ -175,22 +91,10 @@ No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0000000
 Fit: aov(formula = lm(log(tmp$hobs) ~ tmp$clonality))
 
 $`tmp$clonality`
-                                                                      diff
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.04946598
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.39241182
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.44187780
-                                                                        lwr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.004650802
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.437227000
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.486692984
-                                                                       upr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.09428117
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.34759664
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.39706262
-                                                                   p adj
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  0.0264034
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.0000000
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0000000
+                                                                      diff         lwr        upr     p adj
+99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.04440987 -0.01740107 0.10622081 0.2097791
+No Bottleneck + 100% clonality-99% Bottleneck + No clonality    0.02816574 -0.03364520 0.08997668 0.5313653
+No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.01624413 -0.07805507 0.04556681 0.8098113
 
 [1] "100"
   Tukey multiple comparisons of means
@@ -199,22 +103,10 @@ No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0000000
 Fit: aov(formula = lm(log(tmp$hobs) ~ tmp$clonality))
 
 $`tmp$clonality`
-                                                                      diff
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.08910072
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.03170948
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.12081020
-                                                                       lwr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.03809798
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.08271222
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.17181293
-                                                                       upr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.14010345
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality    0.01929326
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.06980746
-                                                                   p adj
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  0.0001482
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.3095654
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0000002
+                                                                      diff          lwr        upr     p adj
+99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.09740198  0.034237714 0.16056625 0.0009623
+No Bottleneck + 100% clonality-99% Bottleneck + No clonality    0.06775419  0.004589928 0.13091846 0.0321682
+No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.02964779 -0.092812054 0.03351648 0.5113428
 
 [1] "200"
   Tukey multiple comparisons of means
@@ -223,22 +115,10 @@ No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0000002
 Fit: aov(formula = lm(log(tmp$hobs) ~ tmp$clonality))
 
 $`tmp$clonality`
-                                                                      diff
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.13264043
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality    0.03665794
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.09598249
-                                                                       lwr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.07479244
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.02119005
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.15383048
-                                                                       upr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.19048842
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality    0.09450593
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.03813450
-                                                                   p adj
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  0.0000004
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.2958813
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0003382
+                                                                      diff         lwr        upr     p adj
+99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.13520429  0.06746380 0.20294477 0.0000118
+No Bottleneck + 100% clonality-99% Bottleneck + No clonality    0.07845457  0.01071409 0.14619505 0.0184660
+No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.05674971 -0.12449019 0.01099077 0.1206186
 
 [1] "TajimaD"
 [1] "Before"
@@ -248,22 +128,10 @@ No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0003382
 Fit: aov(formula = lm(log(tmp$TajimaD) ~ tmp$clonality))
 
 $`tmp$clonality`
-                                                                      diff
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.16072402
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality    0.12671549
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.03400853
-                                                                      lwr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  -0.3724239
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.3870387
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.5477628
-                                                                     upr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  0.6938720
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.6404697
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.4797457
-                                                                   p adj
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  0.7552367
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.8285183
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.9865143
+                                                                      diff        lwr       upr     p adj
+99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.16072402 -0.3724239 0.6938720 0.7552367
+No Bottleneck + 100% clonality-99% Bottleneck + No clonality    0.12671549 -0.3870387 0.6404697 0.8285183
+No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.03400853 -0.5477628 0.4797457 0.9865143
 
 [1] "0"
   Tukey multiple comparisons of means
@@ -272,22 +140,10 @@ No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.9865143
 Fit: aov(formula = lm(log(tmp$TajimaD) ~ tmp$clonality))
 
 $`tmp$clonality`
-                                                                      diff
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  -0.01535811
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -2.27642784
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -2.26106973
-                                                                      lwr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  -0.1880643
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -2.4893829
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -2.4740248
-                                                                      upr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.1573481
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -2.0634728
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -2.0481146
-                                                                   p adj
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  0.9760548
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.0000000
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0000000
+                                                                      diff        lwr        upr     p adj
+99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  -0.01535811 -0.1880643  0.1573481 0.9760548
+No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -2.27642784 -2.4893829 -2.0634728 0.0000000
+No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -2.26106973 -2.4740248 -2.0481146 0.0000000
 
 [1] "10"
   Tukey multiple comparisons of means
@@ -296,22 +152,10 @@ No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0000000
 Fit: aov(formula = lm(log(tmp$TajimaD) ~ tmp$clonality))
 
 $`tmp$clonality`
-                                                                      diff
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  -0.04186446
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -1.94154428
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -1.89967982
-                                                                      lwr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  -0.3244966
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -2.2854266
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -2.2435622
-                                                                      upr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.2407677
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -1.5976619
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -1.5557975
-                                                                   p adj
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  0.9349937
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.0000000
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0000000
+                                                                      diff        lwr        upr     p adj
+99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  -0.04186446 -0.3244966  0.2407677 0.9349937
+No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -1.94154428 -2.2854266 -1.5976619 0.0000000
+No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -1.89967982 -2.2435622 -1.5557975 0.0000000
 
 [1] "100"
   Tukey multiple comparisons of means
@@ -320,22 +164,10 @@ No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0000000
 Fit: aov(formula = lm(log(tmp$TajimaD) ~ tmp$clonality))
 
 $`tmp$clonality`
-                                                                     diff
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.1116656
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.5131811
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.6248466
-                                                                      lwr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  -0.2815112
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.9290723
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -1.0463321
-                                                                      upr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.5048423
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.0972898
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.2033611
-                                                                   p adj
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  0.7805394
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.0110909
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0016702
+                                                                     diff        lwr        upr     p adj
+99% Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.1116656 -0.2815112  0.5048423 0.7805394
+No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.5131811 -0.9290723 -0.0972898 0.0110909
+No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.6248466 -1.0463321 -0.2033611 0.0016702
 
 [1] "200"
   Tukey multiple comparisons of means
@@ -344,141 +176,10 @@ No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0016702
 Fit: aov(formula = lm(log(tmp$TajimaD) ~ tmp$clonality))
 
 $`tmp$clonality`
-                                                                      diff
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  -0.04696099
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.23191975
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.18495876
-                                                                      lwr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  -0.5203238
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.7338554
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.6907952
-                                                                     upr
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  0.4264018
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.2700159
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.3208777
-                                                                   p adj
-99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  0.9700828
-No Bottleneck + 100% clonality-99% Bottleneck + No clonality   0.5196165
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.6629829
+                                                                      diff        lwr       upr     p adj
+99% Bottleneck + 100% clonality-99% Bottleneck + No clonality  -0.04696099 -0.5203238 0.4264018 0.9700828
+No Bottleneck + 100% clonality-99% Bottleneck + No clonality   -0.23191975 -0.7338554 0.2700159 0.5196165
+No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.18495876 -0.6907952 0.3208777 0.6629829
 
 [1] "Sites Pi"
 [1] "Before"
-  Tukey multiple comparisons of means
-    95% family-wise confidence level
-
-Fit: aov(formula = lm(log(tmp$PI) ~ tmp$clonality))
-
-$`tmp$clonality`
-                                                                       diff
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  -0.004220059
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality    0.018352426
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality  0.022572485
-                                                                       lwr
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  -0.04835154
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   -0.02577905
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.02155900
-                                                                      upr
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  0.03991142
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   0.06248391
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.06670396
-                                                                   p adj
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  0.9724209
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   0.5903584
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.4512464
-
-[1] "0"
-  Tukey multiple comparisons of means
-    95% family-wise confidence level
-
-Fit: aov(formula = lm(log(tmp$PI) ~ tmp$clonality))
-
-$`tmp$clonality`
-                                                                       diff
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  -0.001479668
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   -0.615955613
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.614475945
-                                                                       lwr
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  -0.03752785
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   -0.65200379
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.65052413
-                                                                       upr
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality   0.03456851
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   -0.57990743
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.57842776
-                                                                   p adj
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  0.9948594
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   0.0000000
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0000000
-
-[1] "10"
-  Tukey multiple comparisons of means
-    95% family-wise confidence level
-
-Fit: aov(formula = lm(log(tmp$PI) ~ tmp$clonality))
-
-$`tmp$clonality`
-                                                                       diff
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  -0.003933715
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   -0.387467335
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.383533619
-                                                                       lwr
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  -0.04305152
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   -0.42658514
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.42265142
-                                                                       upr
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality   0.03518409
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   -0.34834953
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.34441581
-                                                                   p adj
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  0.9695458
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   0.0000000
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0000000
-
-[1] "100"
-  Tukey multiple comparisons of means
-    95% family-wise confidence level
-
-Fit: aov(formula = lm(log(tmp$PI) ~ tmp$clonality))
-
-$`tmp$clonality`
-                                                                      diff
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  -0.01041573
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   -0.06871214
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.05829641
-                                                                       lwr
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  -0.05342755
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   -0.11172396
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.10130823
-                                                                       upr
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality   0.03259610
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   -0.02570031
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.01528458
-                                                                   p adj
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  0.8359764
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   0.0005913
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.0044403
-
-[1] "200"
-  Tukey multiple comparisons of means
-    95% family-wise confidence level
-
-Fit: aov(formula = lm(log(tmp$PI) ~ tmp$clonality))
-
-$`tmp$clonality`
-                                                                      diff
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  -0.01078364
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   -0.03104827
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.02026462
-                                                                       lwr
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  -0.05553180
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   -0.07579642
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality -0.06501278
-                                                                      upr
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  0.03396451
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   0.01369989
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.02448353
-                                                                   p adj
-99% Bottleneck + 100% clonality-99% Bottleneck + no clonality  0.8374251
-No Bottleneck + 100% clonality-99% Bottleneck + no clonality   0.2328166
-No Bottleneck + 100% clonality-99% Bottleneck + 100% clonality 0.5355032
-
