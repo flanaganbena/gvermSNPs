@@ -61,9 +61,12 @@ p2 <- ggplot(pca_dat, aes(x = PC3, y = PC4, color = nat.non)) +
         axis.line = element_line(colour = "black"),
         legend.position = "none")
 
-pdf("output/pca.pdf", width = 8, heigh = 5.2)
+pdf("output/pca1v2.pdf", width = 8, heigh = 5.2)
 par(mar = c(3, 3, 2, 2))
 p1
+dev.off()
+
+pdf("output/pca3v4.pdf", width = 8, heigh = 5.2)
+par(mar = c(3, 3, 2, 2))
 p2
 dev.off()
-      
