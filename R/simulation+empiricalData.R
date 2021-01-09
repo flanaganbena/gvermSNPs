@@ -157,7 +157,6 @@ emp2 <- read.csv('data/Hobs.means.csv')
 gg2b <- ggplot(emp2,aes(x=natnon,y=Hobs,fill=natnon, label = pop)) +
   geom_boxplot(outlier.shape=20,outlier.size = .8,color=alpha(c("black","red"),.75))+
   geom_jitter(position=position_jitter(width=0.1),color=c("black","red")[emp2$natnon]) +
-  geom_text() +
   xlab("") +
   ylab("Ho") +
   #ylim(0, 0.25) +
@@ -329,7 +328,6 @@ emp4 <- read.csv('data/sites.pi.means.csv')
 gg4b <- ggplot(emp4,aes(x=natnon,y=sites.pi,fill=natnon, label = pop)) +
   geom_boxplot(outlier.shape=20,outlier.size = .8,color=alpha(c("black","red"),.75))+
   geom_jitter(position=position_jitter(width=0.1),color=c("black","red")[emp4$natnon]) +
-  geom_text() + 
   xlab("") +
   ylab("PI") +
   ylim(0, 0.30) +
