@@ -131,7 +131,7 @@ This code take the ngsFST files (by chromesome and pairwise set of populations),
 "output/meanfst.csv"  
 "output/heatmap.pdf"   
 
-### Figure S10: Genotypic richness for select
+### Figure S11: Genotypic richness for select
 "R/simulation_genotypicrichness.R"
 "output/simulation_genotypicrichness.pdf"
 
