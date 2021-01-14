@@ -115,7 +115,7 @@ This code uses principal component analysis (PCA) and linear discriminant analys
 "R/halfdecay.by.chrLength+natnon.500bpBINS.R"  
 "output/halfdecay.by.natnon.500bpBINS-bypop.pdf"  
 "output/halfdecay.by.chrLength+natnon.500bpBINS.pdf"  
-"output/halfdecay.by.chrLength+natnon.500bpBINS.v2.pdf"     
+"output/halfdecay.by.chrLength+natnon.500bpBINS.v2.pdf"
 
 ### Figure S7: admixture clusters (k=2-16)
 "R/ngsAdmix_dips.pretty.k2-16-transformed.R"  
@@ -130,6 +130,10 @@ This code take the ngsFST files (by chromesome and pairwise set of populations),
 "R/heatmap.R"  
 "output/meanfst.csv"  
 "output/heatmap.pdf"   
+
+### Figure S10: Genotypic richness for select
+"R/simulation_genotypicrichness.R"
+"output/simulation_genotypicrichness.pdf"
 
 ### MISC  
 "ProcessBedtoolsMulticov_step1.html"  

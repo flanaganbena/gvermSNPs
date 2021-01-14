@@ -98,7 +98,7 @@ sum_join$gen_plot <- factor(sum_join$gen_plot, levels = c("Before","0" ,"10", "2
 sum_join$cl_2 <- as.character(as.numeric(as.character(sum_join$cl)) / 100)
 
 
-ggplot(sum_join, aes(x = as.factor(gen_plot), y = R.2, fill = cl_2)) +
+a <- ggplot(sum_join, aes(x = as.factor(gen_plot), y = R.2, fill = cl_2)) +
   geom_boxplot() +
   facet_wrap(~bn) +
   ylim(c(0,1)) +
@@ -107,3 +107,8 @@ ggplot(sum_join, aes(x = as.factor(gen_plot), y = R.2, fill = cl_2)) +
   ylab("Genotypic richness (R)") +
   labs(fill = "Clonality") +
   theme_linedraw()
+
+
+pdf('output/simulation_genotypicrichness.pdf',height=4.5,width=6)
+print(a)
+dev.off()
